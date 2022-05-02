@@ -29,16 +29,12 @@ WebDriver driver;
   @Test(dataProvider = "dp")
   public void AmericanTourister_MainClass (String username, String password) throws Exception 
   {
-	  AmericanTourister_POM o= new AmericanTourister_POM();
+	  AmericanT_POM o= new AmericanT_POM();
 	  
 	 o.maximizeBrowser(driver);
 	Thread.sleep(1000);
 	 o.url(driver);
-	 Thread.sleep(4000);
-	 o.login(driver);
 	 Thread.sleep(2000);
-	 o.Button1(driver);
-	 Thread.sleep(0);
 	 o.userName(driver,username);
 	 Thread.sleep(3000);
 	 o.password(driver, password);
@@ -58,8 +54,8 @@ public Object[][] dp()
   		{
 	new Object[] { "pratiksha98@gmail.com", "Pratiksha#1710" },
     new Object[] {  "demo@gmail.com", "demo1" },
-//    new Object[] { "admin@gmail.com", "admin1" },
-//    new Object[] { "pratiksha98@gmail.com", "Pratiksha#1710" },
+    new Object[] { "admin@gmail.com", "admin1" },
+    new Object[] { "pratiksha98@gmail.com", "Pratiksha#1710" },
   };
 }
 }
